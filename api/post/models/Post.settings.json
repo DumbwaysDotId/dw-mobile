@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "category": {
+      "columnName": "category_id",
+      "model": "category",
+      "via": "posts"
+    }
+  }
+}
